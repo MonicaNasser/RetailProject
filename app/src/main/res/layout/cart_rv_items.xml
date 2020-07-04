@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/product_cart_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_add"
+        android:minWidth="100dp"
+        android:minHeight="100dp"
+        android:maxWidth="120dp"
+        android:maxHeight="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/product_title_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/product_cart_iv"
+        app:layout_constraintStart_toEndOf="@id/product_cart_iv"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:text="Active Round Toe"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/product_details_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/product_title_cart_tv"
+        app:layout_constraintStart_toStartOf="@id/product_title_cart_tv"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="Active Round Toe running shoes"
+        android:textColor="#000"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/product_price_cart_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/product_details_cart_tv"
+        app:layout_constraintStart_toStartOf="@id/product_details_cart_tv"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:text="300 LE"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_error"
+        android:maxLines="1"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        />
+    <ImageButton
+        android:id="@+id/dec_item_cart_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_remove"
+        android:minWidth="50dp"
+        android:minHeight="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity_tv"
+        app:layout_constraintEnd_toStartOf="@id/quantity_tv"
+        app:layout_constraintTop_toTopOf="@+id/quantity_tv" />
+
+    <TextView
+        android:id="@+id/quantity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="2"
+        android:gravity="center"
+        android:maxEms="2"
+        android:maxLines="1"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/product_price_cart_tv"
+        app:layout_constraintEnd_toStartOf="@+id/inc_item_cart_ib"
+        app:layout_constraintTop_toTopOf="@id/product_price_cart_tv" />
+
+    <ImageButton
+        android:id="@+id/inc_item_cart_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_add"
+        android:minWidth="50dp"
+        android:minHeight="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quantity_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
